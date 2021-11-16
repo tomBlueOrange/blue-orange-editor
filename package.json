@@ -1,0 +1,23 @@
+{
+  "name": "blue-orange-editor",
+  "version": "1.0.0",
+  "description": "A simple HTML5 WYSIWYG Editor",
+  "main": "dist/editor.min.js",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "keywords": [
+    "WYSIWYG"
+  ],
+  "author": "Tom Seneviratne",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "2.24.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-clean-css": "3.10.0",
+    "gulp-header": "2.0.5",
+    "gulp-rename": "1.4.0",
+    "gulp-uglify": "3.0.1"
+  }
+}
