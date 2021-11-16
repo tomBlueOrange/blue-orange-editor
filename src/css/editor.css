@@ -1,17 +1,9 @@
 :root {
-    --main-font-family: 'Open Sans', sans-serif;
-}
-
-body{
-    margin: 0;
-}
-
-input:focus{
-    outline: none;
-}
-
-textarea:focus{
-    outline: none;
+    --blue-orange-font-family: 'Open Sans', sans-serif;
+    --blue-orange-font-color: #393939;
+    --blue-orange-toolbar-icon-color: #393939;
+    --blue-orange-toolbar-background: #FFFFFF;
+    --blue-orange-toolbar-border-color: #E0E1E2;
 }
 
 [contenteditable][placeholder]:empty:before {
@@ -25,31 +17,8 @@ textarea:focus{
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.designer-body{
-    width: 100vw;
-    min-height: 100vh;
-    background-color: #e0e1e2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.container{
-    width: 770px;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    background-color: white;
-    min-height: 200px;
-    border-radius: 20px;
-    max-height: 80%;
-    overflow: auto;
-}
-
 .blue-orange-editor{
-    font-family: var(--main-font-family);
+    font-family: var(--blue-orange-font-family);
     outline: none;
 }
 
@@ -57,7 +26,6 @@ textarea:focus{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: white;
     border-radius: 4px;
     min-height: 40px;
     flex-wrap: wrap;
@@ -65,7 +33,8 @@ textarea:focus{
     margin-bottom: 20px;
     position: sticky;
     top: 0px;
-    border-bottom: 1px solid #e0e1e2;
+    border-bottom: 1px solid var(--blue-orange-toolbar-border-color);
+    background-color: var(--blue-orange-toolbar-background);
 }
 
 .blue-orange-editor-controls-bubble{
@@ -75,10 +44,10 @@ textarea:focus{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: white;
     min-height: 40px;
     border-radius: 4px;
     overflow: hidden;
+    background-color: var(--blue-orange-toolbar-background);
 }
 
 .blue-orange-editor-control{
@@ -88,6 +57,7 @@ textarea:focus{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: var(--blue-orange-toolbar-icon-color);
 }
 
 .blue-orange-editor-floater{
@@ -115,7 +85,7 @@ textarea:focus{
 
 .blue-orange-editor-floater-input{
     height: 40px;
-    font-family: var(--main-font-family);
+    font-family: var(--blue-orange-font-family);
     padding-left: 10px;
     padding-right: 10px;
     border: none;

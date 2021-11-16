@@ -1,6 +1,6 @@
 {
   "name": "blue-orange-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple HTML5 WYSIWYG Editor",
   "main": "dist/editor.min.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "keywords": [
     "WYSIWYG"
+  ],
+  "files": [
+    "dist/js/*.js",
+    "dist/css/*.css"
   ],
   "author": "Tom Seneviratne",
   "license": "MIT",

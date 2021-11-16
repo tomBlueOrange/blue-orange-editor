@@ -4,6 +4,7 @@ class Editor {
     constructor(element, options={
         position: "static",
         showToolbar: true,
+        icons: "remix",
         toolbar: {
             top: 0,
             options: [
@@ -130,6 +131,11 @@ class Editor {
         } else {
             parsed.placeholder = options.placeholder;
         }
+        if (options.icons == undefined){
+            parsed.icons = "remix";
+        } else {
+            parsed.icons = options.icons;
+        }
         return parsed;
     }
 
@@ -154,8 +160,17 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "h1-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-h-1");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-heading")
+        } else {
+            i.setAttribute("class", "ri-h-1");
+        }
         div.appendChild(i);
+        if (this.options.icons == "fontawesome"){
+            var tn = document.createElement("strong");
+            tn.innerHTML = "1";
+            div.appendChild(tn);
+        }
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
             this.h1();
@@ -168,8 +183,17 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "h2-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-h-2");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-heading")
+        } else {
+            i.setAttribute("class", "ri-h-2");
+        }
         div.appendChild(i);
+        if (this.options.icons == "fontawesome"){
+            var tn = document.createElement("strong");
+            tn.innerHTML = "2";
+            div.appendChild(tn);
+        }
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
             this.h2();
@@ -182,8 +206,17 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "h3-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-h-3");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-heading")
+        } else {
+            i.setAttribute("class", "ri-h-3");
+        }
         div.appendChild(i);
+        if (this.options.icons == "fontawesome"){
+            var tn = document.createElement("strong");
+            tn.innerHTML = "3";
+            div.appendChild(tn);
+        }
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
             this.h3();
@@ -196,8 +229,17 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "h4-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-h-4");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-heading")
+        } else {
+            i.setAttribute("class", "ri-h-4");
+        }
         div.appendChild(i);
+        if (this.options.icons == "fontawesome"){
+            var tn = document.createElement("strong");
+            tn.innerHTML = "4";
+            div.appendChild(tn);
+        }
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
             this.h4();
@@ -210,8 +252,17 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "h5-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-h-5");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-heading")
+        } else {
+            i.setAttribute("class", "ri-h-5");
+        }
         div.appendChild(i);
+        if (this.options.icons == "fontawesome"){
+            var tn = document.createElement("strong");
+            tn.innerHTML = "5";
+            div.appendChild(tn);
+        }
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
             this.h5();
@@ -224,8 +275,17 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "h6-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-h-6");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-heading")
+        } else {
+            i.setAttribute("class", "ri-h-6");
+        }
         div.appendChild(i);
+        if (this.options.icons == "fontawesome"){
+            var tn = document.createElement("strong");
+            tn.innerHTML = "6";
+            div.appendChild(tn);
+        }
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
             this.h6();
@@ -238,7 +298,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "paragraph-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-paragraph");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-paragraph")
+        } else {
+            i.setAttribute("class", "ri-paragraph");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -252,7 +316,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "bold-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-bold");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-bold")
+        } else {
+            i.setAttribute("class", "ri-bold");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -266,7 +334,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "italic-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-italic");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-italic")
+        } else {
+            i.setAttribute("class", "ri-italic");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -280,7 +352,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "underline-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-underline");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-underline")
+        } else {
+            i.setAttribute("class", "ri-underline");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -294,7 +370,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "link-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-links-line");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-link")
+        } else {
+            i.setAttribute("class", "ri-links-line");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -308,7 +388,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "quote-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-chat-quote-line");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-quote-left")
+        } else {
+            i.setAttribute("class", "ri-chat-quote-line");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -322,7 +406,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "order-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-list-ordered");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-list")
+        } else {
+            i.setAttribute("class", "ri-list-ordered");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -337,7 +425,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "unordered-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-list-unordered");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-list-ol")
+        } else {
+            i.setAttribute("class", "ri-list-unordered");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -351,7 +443,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "align-left-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-align-left");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-align-left");
+        } else {
+            i.setAttribute("class", "ri-align-left");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -365,7 +461,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "align-center-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-align-center");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-align-center");
+        } else {
+            i.setAttribute("class", "ri-align-center");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -379,7 +479,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "align-right-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-align-right");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-align-right");
+        } else {
+            i.setAttribute("class", "ri-align-right");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -393,7 +497,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "justify-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-align-justify");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-align-justify");
+        } else {
+            i.setAttribute("class", "ri-align-justify");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -407,7 +515,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "indent-decrease-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-indent-decrease");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-outdent")
+        } else {
+            i.setAttribute("class", "ri-indent-decrease");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -421,7 +533,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "indent-increase-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-indent-increase");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-indent")
+        } else {
+            i.setAttribute("class", "ri-indent-increase");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -435,7 +551,11 @@ class Editor {
         div.setAttribute("class", "blue-orange-editor-control");
         div.setAttribute("id", "equation-control-" + this.UUID);
         var i = document.createElement("i");
-        i.setAttribute("class", "ri-functions");
+        if (this.options.icons == "fontawesome"){
+            i.setAttribute("class", "fas fa-square-root-alt")
+        } else {
+            i.setAttribute("class", "ri-functions");
+        }
         div.appendChild(i);
         div.addEventListener("mousedown", (ev) => {
             ev.preventDefault();
@@ -1429,4 +1549,10 @@ class Editor {
         document.getElementById("editor-window-" + this.UUID).dispatchEvent(this.changeEvent);
     }
 
+    getUuid(){
+        return this.UUID;
+    }
+
 }
+
+module.exports = Editor
