@@ -1,6 +1,6 @@
 {
   "name": "blue-orange-editor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple HTML5 WYSIWYG Editor",
   "main": "dist/editor.min.js",
   "scripts": {

@@ -1554,5 +1554,3 @@ class Editor {
     }
 
 }
-
-module.exports = Editor
