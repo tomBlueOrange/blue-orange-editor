@@ -717,7 +717,7 @@ class Editor {
         if (options.position.toLowerCase() == "bubble"){
             document.addEventListener("mouseup", (ev) => {
                 var parent = document.getElementById("editor-window-" + this.UUID);
-                var child = ev.target;
+                var child = window.getSelection().focusNode;
                 if (this.isDescendantParent(parent, child)){
                     setTimeout(() => {
                         var text = window.getSelection().toString();
